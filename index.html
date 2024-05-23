@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retro Color Text Effects</title>
+<style>
+    body {
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .text-effect {
+        font-size: 3em;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 20px;
+        text-transform: uppercase;
+    }
+
+    /* Neon Glow Text Effect */
+    .neon {
+        color: #0ff;
+        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff;
+    }
+
+    /* Vintage Grunge Text Effect */
+    .vintage {
+        color: #b0c4de;
+        text-shadow: 2px 2px 5px #888888;
+        background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: glitch-anim 2s infinite alternate-reverse;
+    }
+
+    /* Rainbow Spectrum Text Effect */
+    .rainbow {
+        background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    /* Psychedelic Tie-Dye Text Effect */
+    .psychedelic {
+        color: #e6e6fa;
+        text-shadow: 2px 2px 5px #800080;
+        background-image: url('https://www.transparenttextures.com/patterns/60-lines.png');
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: shake-anim 0.1s infinite alternate-reverse;
+    }
+
+    /* Metallic Chrome Text Effect */
+    .metallic {
+        color: #b0c4de;
+        text-shadow: 2px 2px 5px #888888;
+        background: linear-gradient(to right, #d3d3d3, #a9a9a9, #808080, #696969, #778899);
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    @keyframes glitch-anim {
+        0% {
+            text-shadow: 2px 2px 5px #888888;
+        }
+        50% {
+            text-shadow: -2px -2px 5px #888888;
+        }
+        100% {
+            text-shadow: 2px 2px 5px #888888;
+        }
+    }
+
+    @keyframes shake-anim {
+        0% {
+            transform: rotate(-2deg);
+        }
+        50% {
+            transform: rotate(2deg);
+        }
+        100% {
+            transform: rotate(-2deg);
+        }
+    }
+</style>
+</head>
+<body>
+<div class="text-effect neon">Neon Glow Text Effect</div>
+<div class="text-effect vintage">Vintage Grunge Text Effect</div>
+<div class="text-effect rainbow">Rainbow Spectrum Text Effect</div>
+<div class="text-effect psychedelic">Psychedelic Tie-Dye Text Effect</div>
+<div class="text-effect metallic">Metallic Chrome Text Effect</div>
+</body>
+</html>
